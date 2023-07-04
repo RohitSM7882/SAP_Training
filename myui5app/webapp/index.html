@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<hmtl>
+	<head>
+		<script src="https://ui5.sap.com/resources/sap-ui-core.js"
+				data-sap-ui-libs = "sap.m"
+				data-sap-ui-theme = "sap_bluecrystal"
+				data-sap-ui-resourceroots='{"webApp": "./"}'
+		></script>
+		
+		<script>
+			var oView = new sap.ui.view("idMain", {
+				viewName: "webApp.view.View1",
+				type: "XML"
+			});
+			oView.placeAt("content");
+		</script>
+	</head>
+	<body class = "sapUiBody">
+		<div id = "content"></div>
+	</body>
+</hmtl>
