@@ -8,14 +8,17 @@
 					<f:SimpleForm editable="true">
 						<f:content>
 							<Label text="Emp ID"></Label>
-							<Input id="empId" value= "{/empId}"></Input>
+							<Input id="empId" value= "{/empId}" enabled="{/enable}"></Input>
 							<Label text="Emp Name"></Label>
-							<Input id="empName" value= "{/empName}"></Input>
+							<Input id="empName" value= "{/empName}" enabled="{/enable}"></Input>
 							<Label text="Emp Salary"></Label>
-							<Input id="empSalary" value= "{/salary}"></Input>
+							<Input id="empSalary" value= "{/salary}" enabled="{/enable}"></Input>
 							<Label text="Emp Currency"></Label>
-							<Input id="empCurrency" value= "{/currency}"></Input>
+							<Input id="empCurrency" value= "{/currency}" visible="{/enable}"></Input>
+							<Label text="Smoker"></Label>
+							<Input id="empSmoker" value= "{/smoker}" visible="{/enable}"></Input>
 							<Button id="idBtn" text="Submit" press="onSubmit"></Button>
+							<Button id="idBtn_2" text="Flip" press="onFlip"></Button>
 						</f:content>
 					</f:SimpleForm>
 				</content>

@@ -5,18 +5,30 @@ sap.ui.define([
 		"use strict";
 
 	return Controller.extend("webApp.controller.View1", {
-		
+		oCore: sap.ui.getCore(),
+
 		onInit: function() {
 			var oJsonModel = model.createJsonModel("model/data/empData.json");
-			sap.ui.getCore().setModel(oJsonModel);
+			var oJsonModel_2 = model.createJsonModel("model/data/empData_2.json");
+
+			this.oCore.setModel(oJsonModel_2, "named_model");
+			this.oCore.setModel(oJsonModel);
         },
 
 		onSubmit: function() {
-			var _empId = this.getView().byId("empId").getValue();
-			var _empName = this.getView().byId("empName").getValue();
-			var _empSalary = this.getView().byId("empSalary").getValue();
-			var _empCurrency = this.getView().byId("empCurrency").getValue();
-			console.log(_empId + "-" + _empName + "-" + _empSalary + "-" + _empCurrency);
+			var oModel = this.oCore.getModel();
+			if(oModel.getProperty("/enable") == true)
+				oModel.setProperty("/enable", false);
+			else
+				oModel.setProperty("/enable", true);
+		},
+
+		onFlip: function() {
+			var oModel = this.oCore.getModel();
+			var oModelGame = this.oCore.getModel("named_model");
+
+			this.oCore.setModel(oModel, "named_model");
+			this.oCore.setModel(oModelGame);
 		}
 	});
 

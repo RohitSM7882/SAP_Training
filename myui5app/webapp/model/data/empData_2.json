@@ -1,8 +1,7 @@
 {
     "empId": 1000,
-    "empName": "T1",
+    "empName": "T2",
     "salary": 5000,
     "currency": "USD",
-    "smoker": false,
-    "enable": true
+    "smoker": true
 }
