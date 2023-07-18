@@ -13,6 +13,9 @@ sap.ui.define([
 
 			this.oCore.setModel(oJsonModel_2, "named_model");
 			this.oCore.setModel(oJsonModel);
+
+			var oTable = this.getView().byId("_IDGenTable1");
+			oTable.bindRows("/empTab");
         },
 
 		onSubmit: function() {

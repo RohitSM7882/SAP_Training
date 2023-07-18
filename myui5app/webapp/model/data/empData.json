@@ -1,8 +1,38 @@
 {
-    "empId": 1000,
-    "empName": "T1",
-    "salary": 5000,
-    "currency": "USD",
-    "smoker": false,
-    "enable": true
+    "empTab": [
+        {
+            "empId": 9999,
+            "empName": "T1",
+            "salary": 11111,
+            "currency": "USD",
+            "smoker": true,
+            "enable": true
+        },
+        {
+            "empId": 1111,
+            "empName": "T3",
+            "salary": 3333,
+            "currency": "INR",
+            "smoker": false
+        },
+        {
+            "empId": 2222,
+            "empName": "T4",
+            "salary": 5555,
+            "currency": "USD",
+            "smoker": true
+        },
+        {
+            "empId": 3333,
+            "empName": "T5",
+            "salary": 4444,
+            "currency": "INR",
+            "smoker": true
+        }
+    ],
+    "hobbies":[
+        {"key": "D", "value": "Dancing"},
+        {"key": "S", "value": "Singing"},
+        {"key": "C", "value": "Coding"}
+    ]
 }

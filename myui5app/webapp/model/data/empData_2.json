@@ -1,7 +1,32 @@
 {
-    "empId": 1000,
-    "empName": "T2",
-    "salary": 5000,
-    "currency": "USD",
-    "smoker": true
+    "empTab": [
+        {
+            "empId": 1000,
+            "empName": "T2",
+            "salary": 2222,
+            "currency": "USD",
+            "smoker": false
+        },
+        {
+            "empId": 1111,
+            "empName": "T3",
+            "salary": 3333,
+            "currency": "INR",
+            "smoker": false
+        },
+        {
+            "empId": 2222,
+            "empName": "T4",
+            "salary": 5555,
+            "currency": "USD",
+            "smoker": true
+        },
+        {
+            "empId": 3333,
+            "empName": "T5",
+            "salary": 4444,
+            "currency": "INR",
+            "smoker": true
+        }
+    ]
 }

@@ -1,22 +1,70 @@
-<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="webApp.controller.View1"
+<mvc:View 
+	xmlns:core="sap.ui.core" 
+	xmlns:mvc="sap.ui.core.mvc" 
+	xmlns="sap.m" 
+	xmlns:t= "sap.ui.table"
 	xmlns:f="sap.ui.layout.form"
+	controllerName="webApp.controller.View1"
 	xmlns:html="http://www.w3.org/1999/xhtml">
-	<App>
+	<App id="_IDGenApp1">
 		<pages>
-			<Page title="Title">
+			<Page id="_IDGenPage1" title="Title">
 				<content>
-					<f:SimpleForm editable="true">
+					<f:SimpleForm id="_IDGenSimpleForm1" editable="true">
 						<f:content>
-							<Label text="Emp ID"></Label>
-							<Input id="empId" value= "{/empId}" enabled="{/enable}"></Input>
-							<Label text="Emp Name"></Label>
-							<Input id="empName" value= "{/empName}" enabled="{/enable}"></Input>
-							<Label text="Emp Salary"></Label>
-							<Input id="empSalary" value= "{/salary}" enabled="{/enable}"></Input>
-							<Label text="Emp Currency"></Label>
-							<Input id="empCurrency" value= "{/currency}" visible="{/enable}"></Input>
-							<Label text="Smoker"></Label>
-							<Input id="empSmoker" value= "{/smoker}" visible="{/enable}"></Input>
+							<t:Table id="_IDGenTable1" selectionMode="Single" visibleRowCount="4">
+								<t:columns>
+									<t:Column id = "C1">
+										<t:template>
+											<Text id="_IDGenText1" text="{empId}"></Text>
+										</t:template>
+									</t:Column>
+									<t:Column id = "C2" label = "empName">
+										<t:template>
+											<Input id="_IDGenText2" value="{empName}"></Input>
+										</t:template>
+									</t:Column>
+									<t:Column id = "C3" label = "empSalary">
+										<t:template>
+											<Text id="_IDGenText3" text="{salary}"></Text>
+										</t:template>
+									</t:Column>
+									<t:Column id = "C4" label = "empCurrency">
+										<t:template>
+											<Select id="_IDGenSelect1" selectedKey="{currency}">
+												<items>
+													<core:Item id="_IDGenItem1" key="USD" text="USD"></core:Item>
+													<core:Item id="_IDGenItem2" key="INR" text="INR"></core:Item>
+												</items>
+											</Select>
+										</t:template>
+									</t:Column>
+									<t:Column id = "C5" label = "empSmoker">
+										<t:template>
+											<CheckBox id="_IDGenText5" selected="{smoker}"></CheckBox>
+										</t:template>
+									</t:Column>
+									<t:Column id = "C6" label = "empHobby">
+										<t:template>
+											<Select id="_IDGenSelect2" items="{/hobbies}">
+												<items>
+													<core:Item id="_IDGenItem3" key="{key}" text="{value}"></core:Item>
+												</items>
+											</Select>
+										</t:template>
+									</t:Column>
+								</t:columns>
+							</t:Table>
+							<Label id="_IDGenLabel1" text="Emp ID"></Label>
+							<Input id="empId" value= "{/empTab/0/empId}" enabled="{/empTab/0/enable}"></Input>
+							<Label id="_IDGenLabel2" text="Emp Name"></Label>
+							<Input id="empName" value= "{/empTab/0/empName}" enabled="{/empTab/0/enable}"></Input>
+							<Label id="_IDGenLabel3" text="Emp Salary"></Label>
+							<Input id="empSalary" value= "{= ${/empTab/0/empName} === 'test'? 1000: ${/empTab/0/salary}}" enabled="{/empTab/0/enable}"></Input>
+							<Label id="_IDGenLabel4" text="Emp Currency"></Label>
+							<Input id="empCurrency" value= "{/empTab/0/currency}" visible="{/empTab/0/enable}"></Input>
+							<Label id="_IDGenLabel5" text="Smoker"></Label>
+							<Input id="empSmoker" value= "{/empTab/0/smoker}" visible="{/empTab/0/enable}"></Input>
 							<Button id="idBtn" text="Submit" press="onSubmit"></Button>
 							<Button id="idBtn_2" text="Flip" press="onFlip"></Button>
 						</f:content>
