@@ -1,11 +1,13 @@
 sap.ui.define([
 	"sap/ui/core/mvc/Controller",
-	"webApp/model/models"
-	], function(Controller, model) {
+	"webApp/model/models",
+	"webApp/util/common"
+	], function(Controller, model, utilCommon) {
 		"use strict";
 
 	return Controller.extend("webApp.controller.View1", {
 		oCore: sap.ui.getCore(),
+		_utilCommon: utilCommon,
 
 		onInit: function() {
 			var oJsonModel = model.createJsonModel("model/data/empData.json");
