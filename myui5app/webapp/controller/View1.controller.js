@@ -34,6 +34,15 @@ sap.ui.define([
 
 			this.oCore.setModel(oModel, "named_model");
 			this.oCore.setModel(oModelGame);
+		},
+
+		//Loads the row-data to the input feilds given below
+		loadMasterData: function(oEvent) {
+			//Get address of the element selected
+			var sPath = oEvent.getParameter("rowContext").getPath();
+
+			//bind this element to the form
+			this.getView().byId("_IDGenSimpleForm1").bindElement(sPath);
 		}
 	});
 
