@@ -7,14 +7,13 @@ sap.ui.define([
     function (Controller) {
         "use strict";
 
-        return Controller.extend("fiorilikeapp.controller.View1", {
+        return Controller.extend("fiorilikeapp.controller.View2", {
             // onInit: function () {
 
             // },
 
-            onNext: function() {
-                var _appContainer = this.getView().getParent();
-                _appContainer.to("idView2");
+            onPrevious: function() {
+                this.getView().getParent().to("idView1");
             }
         });
     });

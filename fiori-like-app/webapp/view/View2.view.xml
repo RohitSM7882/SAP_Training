@@ -1,0 +1,11 @@
+<mvc:View controllerName="fiorilikeapp.controller.View2"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m">
+
+    <Page id="idView2" title="View 2">
+        <content>
+            <Button id="_IDGenButton1" text="Previous View" press="onPrevious"></Button>
+        </content>
+    </Page>
+
+</mvc:View>

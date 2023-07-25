@@ -3,32 +3,40 @@
  */
 
 sap.ui.define([
-        "sap/ui/core/UIComponent",
-        "sap/ui/Device",
-        "fiorilikeapp/model/models"
+        "sap/ui/core/UIComponent"
     ],
-    function (UIComponent, Device, models) {
-        "use strict";
-
+    function (UIComponent) {
         return UIComponent.extend("fiorilikeapp.Component", {
-            metadata: {
-                manifest: "json"
-            },
+            metadata: {},
 
-            /**
-             * The component is initialized by UI5 automatically during the startup of the app and calls the init method once.
-             * @public
-             * @override
-             */
             init: function () {
                 // call the base component's init function
                 UIComponent.prototype.init.apply(this, arguments);
+            },
+            
+            createContent: function() {
+                var oView = new sap.ui.view({
+                    viewName: "fiorilikeapp.view.App",
+                    type: "XML",
+                    id: "idAppView"
+                });
 
-                // enable routing
-                this.getRouter().initialize();
+                var _view1 = new sap.ui.view({
+                    viewName: "fiorilikeapp.view.View1",
+                    type: "XML",
+                    id: "idView1"
+                });
 
-                // set the device model
-                this.setModel(models.createDeviceModel(), "device");
+                var _view2 = new sap.ui.view({
+                    viewName: "fiorilikeapp.view.View2",
+                    type: "XML",
+                    id: "idView2"
+                });
+
+                var _appContainer = oView.byId("idAppContainer");
+                _appContainer.addPage(_view1).addPage(_view2);
+
+                return oView;
             }
         });
     }

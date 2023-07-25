@@ -6,8 +6,14 @@ sap.ui.define(
       "use strict";
   
       return BaseController.extend("fiorilikeapp.controller.App", {
-        onInit() {
+
+        // onInit() {
+        // },
+
+        onClick: function() {
+          alert("Button Clicked!!");
         }
+        
       });
     }
   );
