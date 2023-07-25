@@ -2,10 +2,17 @@
     xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
     xmlns="sap.m">
 
-    <Page id="idView2" title="View 2">
+    <Page id="idView2" title="View 2" showNavButton="true" navButtonPress="onPrevious">
         <content>
-            <Button id="_IDGenButton1" text="Previous View" press="onPrevious"></Button>
         </content>
+
+        <footer>
+            <Toolbar id="_IDGenToolbar1" >
+                <ToolbarSpacer id="_IDGenToolbarSpacer1" />
+                    <Button id="_IDGenButton1" text="Save" type="Accept"></Button>
+                    <Button id="_IDGenButton2" text="Cancel" type="Reject"></Button>
+            </Toolbar>
+        </footer>
     </Page>
 
 </mvc:View>

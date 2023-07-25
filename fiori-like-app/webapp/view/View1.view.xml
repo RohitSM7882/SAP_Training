@@ -3,8 +3,11 @@
     xmlns="sap.m">
 
     <Page id="idView1" title="View 1">
+        <headerContent>
+            <Button id="_IDGenButton1" icon="sap-icon://forward" press="onNext"></Button>
+        </headerContent>
         <content>
-            <Button id="_IDGenButton1" text="Next View>" press="onNext"></Button>
+            <SearchField id="_IDGenSearchField1" search="onSearchClick"></SearchField>
         </content>
     </Page>
 
