@@ -8,7 +8,55 @@
         </headerContent>
         <content>
             <SearchField id="_IDGenSearchField1" search="onSearchClick"></SearchField>
+
+            <List id="idList" items="{/fruits}" mode="Delete" delete="onDelete" itemPress="onItemClick">
+                <items>
+
+                    <ObjectListItem id="_IDGenObjectListItem1" 
+                        icon="{image}"
+                        title="{name}"
+                        intro="{type}"
+                        number="{price}"
+                        numberUnit="{currency}"
+                        type="Navigation"
+                    ></ObjectListItem>
+
+
+                    <!-- <DisplayListItem id="_IDGenDisplayListItem1" 
+                        label="Apple"
+                        value="Doctor's Kryptonite"
+                    ></DisplayListItem>
+
+                    <StandardListItem id="_IDGenStandardListItem1" 
+                        icon="sap-icon://accept"
+                        title="Accept"
+                        info="Accepts the data"
+                    ></StandardListItem>
+
+                    <InputListItem id="_IDGenInputListItem1" >
+                        <content>
+                            <HBox id="_IDGenHBox1" >
+                                <Label id="_IDGenLabel1" text="Enter Input"></Label>
+                                <Input id="_IDGenInput1" ></Input>
+                            </HBox>
+                        </content>
+                    </InputListItem>
+
+                    <CustomListItem id="_IDGenCustomListItem1" >
+                        <Label id="_IDGenLabel2" text="Switch Button"></Label>
+                        <Switch id="_IDGenSwitch1" ></Switch>
+                    </CustomListItem>
+
+                    <ObjectListItem id="_IDGenObjectListItem1" 
+                        icon="sap-icon://accept"
+                        title="Accept"
+                        intro="Accepts the data"
+                        number="111"
+                        numberUnit="Sample"
+                    ></ObjectListItem> -->
+                    
+                </items>
+            </List>
         </content>
     </Page>
-
 </mvc:View>

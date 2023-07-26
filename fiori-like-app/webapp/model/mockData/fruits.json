@@ -1,0 +1,44 @@
+{
+    "fruits": [
+        {
+            "name": "Lemon",
+            "color": "Yellow",
+            "type": "Citrus",
+            "benefits": "Vitamin C",
+            "price": 20,
+            "currency": "INR",
+            "stock_status": "Available",
+            "image": "https://media.istockphoto.com/id/1389128157/photo/lemon-fruit-with-leaf-isolated-whole-lemon-and-a-half-with-leaves-on-white-background-lemons.webp?b=1&s=170667a&w=0&k=20&c=PO3M-bjo-TGo6WfH7LzZLSBV2jP9Wp9ErNzpzKOaaCo="
+        },
+        {
+            "name": "Apple",
+            "color": "Red",
+            "type": "Pome",
+            "benefits": "Doctoer's Kryptonite",
+            "price": 50,
+            "currency": "INR",
+            "stock_status": "Available",
+            "image": "https://static.libertyprim.com/files/familles/pomme-large.jpg?1569271834"
+        },
+        {
+            "name": "Blue Berry",
+            "color": "Blue",
+            "type": "Berries",
+            "benefits": "Blue in Color",
+            "price": 70,
+            "currency": "INR",
+            "stock_status": "Out of Stock",
+            "image": "https://www.bigbasket.com/media/uploads/p/l/30009286_7-fresho-blueberry.jpg"
+        },
+        {
+            "name": "Papaya",
+            "color": "Green",
+            "type": "Tropical",
+            "benefits": "Good for skin",
+            "price": 100,
+            "currency": "INR",
+            "stock_status": "Not Available",
+            "image": "https://seed2plant.in/cdn/shop/products/papayaseeds.jpg?v=1606739358  "
+        }
+    ]
+}

@@ -3,9 +3,10 @@
  */
 
 sap.ui.define([
-        "sap/ui/core/UIComponent"
+        "sap/ui/core/UIComponent",
+        "fiorilikeapp/model/models"
     ],
-    function (UIComponent) {
+    function (UIComponent, models) {
         return UIComponent.extend("fiorilikeapp.Component", {
             metadata: {},
 
@@ -20,6 +21,10 @@ sap.ui.define([
                     type: "XML",
                     id: "idAppView"
                 });
+
+                //this is set at global level, all the views 
+                var oModelObj = models.createFruitModel();
+                oView.setModel(oModelObj);
 
                 var _view1 = new sap.ui.view({
                     viewName: "fiorilikeapp.view.View1",
