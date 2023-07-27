@@ -39,7 +39,7 @@ sap.ui.define([
                 });
 
                 var _appContainer = oView.byId("idAppContainer");
-                _appContainer.addPage(_view1).addPage(_view2);
+                _appContainer.addMasterPage(_view1).addDetailPage(_view2);
 
                 return oView;
             }

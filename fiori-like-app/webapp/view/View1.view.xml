@@ -14,9 +14,9 @@
                     path: '/fruits',
                     sorter: {path: 'name'}
                 }"
-                mode="MultiSelect" 
+                mode="SingleSelectMaster" 
                 delete="onDelete" 
-                itemPress="onItemClick"
+                selectionChange="onItemClick"
             >
                 <headerToolbar>
                     <Toolbar id="_IDGenToolbar1" >
@@ -33,7 +33,6 @@
                         intro="{type}"
                         number="{price}"
                         numberUnit="{currency}"
-                        type="Navigation"
                     ></ObjectListItem>
 
 
@@ -73,5 +72,11 @@
                 </items>
             </List>
         </content>
+
+        <footer>
+            <Toolbar id="_IDGenToolbar2" >
+                <ToolbarSpacer id="_IDGenToolbarSpacer2" />
+            </Toolbar>
+        </footer>
     </Page>
 </mvc:View>

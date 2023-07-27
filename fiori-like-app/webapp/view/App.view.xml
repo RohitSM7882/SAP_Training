@@ -3,8 +3,6 @@
     xmlns:mvc="sap.ui.core.mvc"
     xmlns="sap.m">
 
-    <App id="idAppContainer">
-        <pages>
-        </pages>
-    </App>
+    <SplitApp id="idAppContainer">
+    </SplitApp>
 </mvc:View>

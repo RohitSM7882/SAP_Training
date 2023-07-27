@@ -2,7 +2,7 @@
     xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
     xmlns="sap.m">
 
-    <Page id="idDetails" title="Details View" showNavButton="true" navButtonPress="onPrevious">
+    <Page id="idDetails" title="Details View">
         <ObjectHeader id="_IDGenObjectHeader1" 
             icon="{image}"
             title="{name}"
@@ -10,5 +10,12 @@
             number="{price}"
             numberUnit="{currency}"
         ></ObjectHeader>
+
+        <footer>
+            <Toolbar id="_IDGenToolbar1" >
+                <ToolbarSpacer id="_IDGenToolbarSpacer1" />
+                    <Button id="_IDGenButton1" type="Accept" text="Save" press="onSave"></Button>
+            </Toolbar>
+        </footer>
     </Page>
 </mvc:View>

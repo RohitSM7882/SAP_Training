@@ -59,7 +59,7 @@ sap.ui.define([
 
             onItemClick: function(_event) {
                 var _path = _event.getParameter("listItem").getBindingContextPath();
-                var _detailsView = this.getView().getParent().getPages()[1];
+                var _detailsView = this.getView().getParent().getParent().getDetailPages()[0];
                 _detailsView.bindElement(_path);
                 this.onNext();
             },
