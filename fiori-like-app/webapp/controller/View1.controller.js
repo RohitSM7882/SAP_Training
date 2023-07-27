@@ -58,7 +58,17 @@ sap.ui.define([
             },
 
             onItemClick: function(_event) {
+                var _path = _event.getParameter("listItem").getBindingContextPath();
+                var _detailsView = this.getView().getParent().getPages()[1];
+                _detailsView.bindElement(_path);
                 this.onNext();
+            },
+
+            onMultipleDelete: function(_event) {
+                var _viewObj = this.getView().byId("idList");
+                var _selectedItems = _viewObj.getSelectedItems();
+                for(var i = _selectedItems.length; i >= 0; i--) 
+                    _viewObj.removeItem(_selectedItems[i]);
             }
         });
     });

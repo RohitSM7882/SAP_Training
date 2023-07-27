@@ -33,7 +33,7 @@ sap.ui.define([
                 });
 
                 var _view2 = new sap.ui.view({
-                    viewName: "fiorilikeapp.view.View2",
+                    viewName: "fiorilikeapp.view.Details",
                     type: "XML",
                     id: "idView2"
                 });

@@ -1,0 +1,14 @@
+<mvc:View controllerName="fiorilikeapp.controller.Details"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m">
+
+    <Page id="idDetails" title="Details View" showNavButton="true" navButtonPress="onPrevious">
+        <ObjectHeader id="_IDGenObjectHeader1" 
+            icon="{image}"
+            title="{name}"
+            intro="{benefits}"
+            number="{price}"
+            numberUnit="{currency}"
+        ></ObjectHeader>
+    </Page>
+</mvc:View>

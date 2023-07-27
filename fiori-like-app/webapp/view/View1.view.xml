@@ -9,7 +9,22 @@
         <content>
             <SearchField id="_IDGenSearchField1" search="onSearchClick"></SearchField>
 
-            <List id="idList" items="{/fruits}" mode="Delete" delete="onDelete" itemPress="onItemClick">
+            <List id="idList" 
+                items="{
+                    path: '/fruits',
+                    sorter: {path: 'name'}
+                }"
+                mode="MultiSelect" 
+                delete="onDelete" 
+                itemPress="onItemClick"
+            >
+                <headerToolbar>
+                    <Toolbar id="_IDGenToolbar1" >
+                        <ToolbarSpacer id="_IDGenToolbarSpacer1" />
+                        <Button id="_IDGenButton2" icon="sap-icon://delete" press="onMultipleDelete"></Button>
+                    </Toolbar>
+                </headerToolbar>
+
                 <items>
 
                     <ObjectListItem id="_IDGenObjectListItem1" 
