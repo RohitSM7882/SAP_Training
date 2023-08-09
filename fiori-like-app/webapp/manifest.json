@@ -44,6 +44,7 @@
         "sap.ui.comp": {},
         "sap.ui.generic.app": {},
         "sap.ui.table": {},
+        "sap.ui.layout": {},
         "sap.ushell": {}
       }
     },
@@ -66,40 +67,44 @@
         }
       ]
     },
-    "routing": {
-      "config": {
-        "routerClass": "sap.m.routing.Router",
-        "viewType": "XML",
-        "async": true,
-        "viewPath": "fiorilikeapp.view",
-        "controlAggregation": "pages",
-        "controlId": "app",
-        "clearControlAggregation": false
-      },
-      "routes": [
-        {
-          "name": "RouteView1",
-          "pattern": ":?query:",
-          "target": [
-            "TargetView1"
-          ]
-        }
-      ],
-      "targets": {
-        "TargetView1": {
-          "viewType": "XML",
-          "transition": "slide",
-          "clearControlAggregation": false,
-          "viewId": "View1",
-          "viewName": "View1"
-        }
-      }
-    },
     "rootView": {
       "viewName": "fiorilikeapp.view.App",
       "type": "XML",
       "async": true,
-      "id": "App"
+      "id": "idAppContainer"
+    },
+    "routing": {
+      "config": {
+        "routerClass": "sap.m.routing.Router",
+        "viewType": "XML",
+        "path": "fiorilikeapp.view",
+        "controlId": "idAppContainer",
+        "async": true
+      },
+      "routes": [
+        {
+          "pattern": "",
+          "name": "routeMain",
+          "target": "targetMain"
+        },
+        {
+          "pattern": "details",
+          "name": "routeDetails",
+          "target": "targetDetails"
+        }
+      ],
+      "targets": {
+        "targetMain": {
+          "viewName": "View1",
+          "viewId": "idView1",
+          "controlAggregation": "masterPages"
+        },
+        "targetDetails": {
+          "viewName": "Details",
+          "viewId": "idDetails",
+          "controlAggregation": "detailPages"
+        }
+      }
     }
   }
 }
