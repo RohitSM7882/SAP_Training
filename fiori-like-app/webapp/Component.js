@@ -10,7 +10,7 @@ sap.ui.define([
     function (UIComponent, models, Targets) {
         return UIComponent.extend("fiorilikeapp.Component", {
             metadata: {
-                "manifest": "json"
+                manifest: "json"
             },
 
             init: function () {

@@ -14,7 +14,13 @@
       "id": "@sap/generator-fiori:basic",
       "version": "1.10.1",
       "toolsId": "b2529d7c-17b7-408e-a1fe-5fdd83bfb614"
-    }
+    },
+    "dataSources": {
+			"tableData_alias": {
+				"uri": "model/mockData/fruits.json",
+				"type": "JSON"
+			}
+		}
   },
   "sap.ui": {
     "technology": "UI5",
@@ -58,6 +64,11 @@
         "settings": {
           "bundleName": "fiorilikeapp.i18n.i18n"
         }
+      },
+      "": {
+        "type": "sap.ui.model.json.JSONModel",
+        "uri": "model/mockData/fruits.json",
+        "preload": true
       }
     },
     "resources": {
@@ -85,7 +96,7 @@
         {
           "pattern": "",
           "name": "routeMain",
-          "target": "targetMain"
+          "target": ["targetMain", "targetDetails"]
         },
         {
           "pattern": "details",
