@@ -11,8 +11,7 @@
 
             <List id="idList" 
                 items="{
-                    path: '/fruits',
-                    sorter: {path: 'name'}
+                    path: '/fruits'
                 }"
                 mode="SingleSelectMaster" 
                 delete="onDelete" 

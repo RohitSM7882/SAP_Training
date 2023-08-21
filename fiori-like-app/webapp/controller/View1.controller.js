@@ -10,9 +10,17 @@ sap.ui.define([
         "use strict";
 
         return Controller.extend("fiorilikeapp.controller.View1", {
-            // onInit: function () {
+            onInit: function () {
+                this.oRouter = this.getOwnerComponent().getRouter();
+                this.oRouter.attachRoutePatternMatched(this.changeSelection, this);
+            },
 
-            // },
+            changeSelection: function(_event) {
+                var _fruitId = parseInt(_event.getParameter("arguments").fruitId);
+                var _itemList = this.getView().byId("idList");
+                var _itemToBeSelected = _itemList.getItems()[_fruitId];
+                _itemList.setSelectedItem(_itemToBeSelected);
+            },
 
             onNext: function() {
                 var _appContainer = this.getView().getParent();
@@ -58,10 +66,17 @@ sap.ui.define([
             },
 
             onItemClick: function(_event) {
+                // debugger;
                 var _path = _event.getParameter("listItem").getBindingContextPath();
-                var _detailsView = this.getView().getParent().getParent().getDetailPages()[0];
-                _detailsView.bindElement(_path);
-                this.onNext();
+                // var _detailsView = this.getView().getParent().getParent().getDetailPages()[0];
+                // _detailsView.bindElement(_path);
+                // this.onNext();
+
+                // debugger;
+                var _sPath = _path.split("/")[_path.split("/").length - 1]
+                this.oRouter.navTo("routeDetails", {
+                    fruitId: _sPath
+                });
             },
 
             onMultipleDelete: function(_event) {

@@ -96,12 +96,12 @@
         {
           "pattern": "",
           "name": "routeMain",
-          "target": ["targetMain", "targetDetails"]
+          "target": "targetMain"
         },
         {
-          "pattern": "details",
+          "pattern": "details/{fruitId}",
           "name": "routeDetails",
-          "target": "targetDetails"
+          "target": ["targetMain", "targetDetails"]
         }
       ],
       "targets": {

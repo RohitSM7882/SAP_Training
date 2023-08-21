@@ -40,5 +40,65 @@
             "stock_status": "Not Available",
             "image": "https://seed2plant.in/cdn/shop/products/papayaseeds.jpg?v=1606739358  "
         }
+    ],
+    "supplier": [
+        {
+            "name": "BB",
+            "location": "Marathahalli",
+            "city": "Banglore",
+            "since_when": "2011",
+            "contact_person": "Raju",
+            "contact_no": "123456789",
+            "specalization": [
+                "Lemon",
+                "Apple"
+            ]
+        },
+        {
+            "name": "Dunzo",
+            "location": "Palace Road",
+            "city": "Mysore",
+            "since_when": "2019",
+            "contact_person": "Sham",
+            "contact_no": "987654321",
+            "specalization": [
+                "Pappaya",
+                "Apple"
+            ]
+        },
+        {
+            "name": "Star Fisheries",
+            "location": "Andheri",
+            "city": "Mumbai",
+            "since_when": "2015",
+            "contact_person": "BabuRao Apte",
+            "contact_no": "159357456",
+            "specalization": [
+                "Blue Berry",
+                "Lemon"
+            ]
+        }
+    ],
+    "cities": [
+        {
+            "name": "Mumbai",
+            "state": "MH",
+            "country": "India"
+        },
+        {
+            "name": "Bengaluru",
+            "state": "KA",
+            "country": "India"
+        },
+        {
+            "name": "Chennai",
+            "state": "TN",
+            "country": "India"
+        },
+        {
+            "name": "Kochi",
+            "state": "KR",
+            "country": "India"
+        }
     ]
 }
