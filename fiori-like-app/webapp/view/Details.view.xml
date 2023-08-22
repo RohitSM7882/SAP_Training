@@ -1,6 +1,11 @@
-<mvc:View xmlns:core="sap.ui.core" xmlns:form="sap.ui.layout.form" controllerName="fiorilikeapp.controller.Details"
-    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
-    xmlns="sap.m">
+<mvc:View 
+    xmlns:core="sap.ui.core" 
+    xmlns:form="sap.ui.layout.form" 
+    xmlns="sap.m"
+    xmlns:mvc="sap.ui.core.mvc" 
+    controllerName="fiorilikeapp.controller.Details"
+    displayBlock="true"
+    >
 
     <Page id="idDetails" title="Details View">
         <content>
@@ -15,65 +20,13 @@
             <IconTabBar id="_IDGenIconTabBar1">
                 <items>
                     <IconTabFilter id="_IDGenIconTabFilter1" icon="sap-icon://supplier" key="supplier" text="Suppliers">
-                        <Table id="_IDGenTable1" items="{/supplier}">
-                            <columns>
-                                <Column id="_IDGenColumn1">
-                                    <header>
-                                        <Text id="_IDGenText1" text="Name"></Text>
-                                    </header>
-                                </Column>
-                                <Column id="_IDGenColumn2">
-                                    <header>
-                                        <Text id="_IDGenText2" text="Location"></Text>
-                                    </header>
-                                </Column>
-                                <Column id="_IDGenColumn3">
-                                    <header>
-                                        <Text id="_IDGenText3" text="City"></Text>
-                                    </header>
-                                </Column>
-                                <Column id="_IDGenColumn4" minScreenWidth="Desktop" demandPopin="true">
-                                    <header>
-                                        <Text id="_IDGenText8" text="Since When"></Text>
-                                    </header>
-                                </Column>
-                            </columns>
-                            <items>
-                                <ColumnListItem id="_IDGenColumnListItem1" >
-                                    <cells>
-                                        <Text id="_IDGenText4" text="{name}"></Text>
-                                        <Text id="_IDGenText5" text="{location}"></Text>
-                                        <Input id="_IDGenText6" value="{city}" showValueHelp="true" valueHelpRequest="onValueHelp"></Input>
-                                        <Text id="_IDGenText7" text="{since_when}"></Text>
-                                    </cells>
-                                </ColumnListItem>
-                            </items>
-                        </Table>
+                        <core:Fragment fragmentName = "fiorilikeapp.fragments.supplierData" type = "XML"></core:Fragment>
                     </IconTabFilter>
                     <IconTabFilter id="_IDGenIconTabFilter2" icon="sap-icon://information" key="more" text="More Info">
-                        <form:SimpleForm id="_IDGenSimpleForm1" >
-                            <form:content>
-                                <Label id="_IDGenLabel1" text="Name"></Label>
-                                <Text id="_IDGenText9" text="{name}"></Text>
-                                <Label id="_IDGenLabel2" text="Type"></Label>
-                                <Text id="_IDGenText10" text="{type}"></Text>
-                                <Label id="_IDGenLabel3" text="Color"></Label>
-                                <Text id="_IDGenText11" text="{color}"></Text>
-                                <Label id="_IDGenLabel4" text="Price"></Label>
-                                <Text id="_IDGenText12" text="{price} {currency}"></Text>
-                            </form:content>
-                        </form:SimpleForm>
+                        <core:Fragment fragmentName = "fiorilikeapp.fragments.moreInfoData" type = "XML"></core:Fragment>
                     </IconTabFilter>
                     <IconTabFilter id="_IDGenIconTabFilter3" icon="sap-icon://home" key="cities" text="City Selected">
-                        <Select id="_IDGenSelect1" items="{/cities}">
-                            <core:Item id="_IDGenItem1" key="{name}" text="{name}"></core:Item>
-                        </Select>
-                        <ComboBox id="_IDGenComboBox1" items="{/cities}">
-                            <core:Item id="_IDGenItem2" key="{name}" text="{name}"></core:Item>
-                        </ComboBox>
-                        <MultiComboBox id="_IDGenMultiComboBox1" items="{/cities}">
-                            <core:Item id="_IDGenItem3" key="{name}" text="{name}"></core:Item>
-                        </MultiComboBox>
+                        <core:Fragment fragmentName = "fiorilikeapp.fragments.citySelectedData" type = "XML"></core:Fragment>
                     </IconTabFilter>
                 </items>
             </IconTabBar>

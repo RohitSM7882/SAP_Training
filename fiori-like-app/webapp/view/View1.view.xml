@@ -1,5 +1,6 @@
 <mvc:View controllerName="fiorilikeapp.controller.View1"
-    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns:mvc="sap.ui.core.mvc" 
+    displayBlock="true"
     xmlns="sap.m">
 
     <Page id="idView1" title="View 1">

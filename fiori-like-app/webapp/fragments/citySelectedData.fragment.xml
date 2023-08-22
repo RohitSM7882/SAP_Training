@@ -1,0 +1,16 @@
+<core:FragmentDefinition
+    xmlns:core = "sap.ui.core" 
+    xmlns = "sap.m"
+    >
+
+    <Select id="_IDGenSelect1" items="{/cities}">
+        <core:Item id="_IDGenItem1" key="{name}" text="{name}"></core:Item>
+    </Select>
+    <ComboBox id="_IDGenComboBox1" items="{/cities}">
+        <core:Item id="_IDGenItem2" key="{name}" text="{name}"></core:Item>
+    </ComboBox>
+    <MultiComboBox id="_IDGenMultiComboBox1" items="{/cities}">
+        <core:Item id="_IDGenItem3" key="{name}" text="{name}"></core:Item>
+    </MultiComboBox>
+    
+</core:FragmentDefinition>

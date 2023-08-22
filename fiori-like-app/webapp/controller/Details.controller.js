@@ -41,8 +41,67 @@ sap.ui.define([
                 })
             },
 
+            onCityValueChange: function(_event) {
+                this.feildObj.setValue(_event.getParameter("selectedItem").getLabel());
+            },
+
             onValueHelp: function(_event) {
-                MessageBox.confirm("This page is under development!!!");
+                this.feildObj = _event.getSource();
+                if(!this.cityDataobj){
+                    this.cityDataobj = new sap.ui.xmlfragment("fiorilikeapp.fragments.popup");
+                    this.getView().addDependent(this.cityDataobj);
+                    this.cityDataobj.setTitle("City Data");
+                    this.cityDataobj.attachConfirm(this.onCityValueChange, this);
+                    this.cityDataobj.setMultiSelect(false);
+                }
+
+                this.cityDataobj.bindAggregation(
+                    "items",
+                    {
+                        path: "/cities",
+                        template: new sap.m.DisplayListItem({
+                            label: "{name}",
+                            value: "{state}"
+                        })
+                    }
+                );
+
+                this.cityDataobj.setContentWidth("auto");
+                this.cityDataobj.setContentHeight("auto");
+                this.cityDataobj.rerender();
+                this.cityDataobj.open();
+            },
+
+            //create global object to reduce multiple object creation(everytime new sap.ui.xmlfragmen() is called a new object will be created and it consumes sapce in memory)
+            cityDataobj: null,
+            supplierDataObj: null,
+            onTableFilter: function(_event) {
+                if(!this.supplierDataObj){
+                    this.supplierDataObj = new sap.ui.xmlfragment("fiorilikeapp.fragments.popup");
+                    
+                    //this.supplierDataObj don't have access to the model as it is a fragment
+                    //add dependency to the fragment so that it can access same as view level
+                    this.getView().addDependent(this.supplierDataObj);
+                    this.supplierDataObj.setTitle("Suppliers Data");
+                }
+                this.supplierDataObj.bindAggregation(
+                    "items",
+                    {
+                        path: "/supplier",
+                        template: new sap.m.DisplayListItem({
+                            label: "{name}",
+                            value: "{city}"
+                        })
+                    }
+                );
+
+                // Reset dialog's content size to auto
+                this.supplierDataObj.setContentWidth("auto");
+                this.supplierDataObj.setContentHeight("auto");
+                // Trigger the recalculation of the content size
+                this.supplierDataObj.rerender();
+
+                this.supplierDataObj.open();
             }
         });
     });
