@@ -21,7 +21,7 @@
             <IconTabBar id="_IDGenIconTabBar1">
                 <items>
                     <IconTabFilter id="_IDGenIconTabFilter1" icon="sap-icon://supplier" key="supplier" text="Suppliers">
-                        <control:Heading id="_IDGenHeading1" text = "Suppliers Data"></control:Heading>
+                        <!-- <control:Heading id="_IDGenHeading1" text = "Suppliers Data"></control:Heading> -->
                         <core:Fragment fragmentName = "fiorilikeapp.fragments.supplierData" type = "XML"></core:Fragment>
                     </IconTabFilter>
                     <IconTabFilter id="_IDGenIconTabFilter2" icon="sap-icon://information" key="more" text="More Info">
